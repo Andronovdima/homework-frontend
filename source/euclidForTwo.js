@@ -1,3 +1,4 @@
+'use strict';
 let euclidForTwo = function (a, b) {
 	if (a === 0)
 		return b;
