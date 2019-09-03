@@ -29,3 +29,11 @@ QUnit.module('Тестируем функцию euclid', function () {
 		assert.strictEqual(euclid(...[ ...temp, ...temp, ...temp, ...temp, ...temp ]), euclid(...temp));
 	});
 });
+
+
+QUnit.module('Тестируем функцию euclid', function () {
+	QUnit.test('На входе одно из чисел 0', function (assert) {
+		assert.strictEqual(euclid(7, 0), 7, 'euclid(7, 0) === 7');
+		assert.strictEqual(euclid(0 , 28), 28, 'euclid(0 , 28) === 28');
+	});
+});
