@@ -37,3 +37,17 @@ QUnit.module('Тестируем функцию euclid', function () {
 		assert.strictEqual(euclid(0 , 28), 28, 'euclid(0 , 28) === 28');
 	});
 });
+
+QUnit.module('Тестируем функцию euclid', function () {
+	QUnit.test('На входе невалидные данные', function (assert) {
+		assert.strictEqual(euclid('hello', 0), 'unvalid data', 'euclid(hello, 0) === unvalid data');
+		assert.strictEqual(euclid(0 ,'jjjj'), 'unvalid data', 'euclid(0 , jjjj) === unvalid data');
+	});
+});
+
+QUnit.module('Тестируем функцию euclid', function () {
+	QUnit.test('На входе любые числа', function (assert) {
+		assert.strictEqual(euclid(-5, 5), 5, 'euclid(-5, 5) === 5');
+		assert.strictEqual(euclid(-7 , 28), 7, 'euclid(7 , 28) === 7');
+	});
+});
