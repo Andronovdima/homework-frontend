@@ -40,8 +40,8 @@ QUnit.module('Тестируем функцию euclid', function () {
 
 QUnit.module('Тестируем функцию euclid', function () {
 	QUnit.test('На входе невалидные данные', function (assert) {
-		assert.strictEqual(euclid('hello', 0), 'unvalid data', 'euclid(hello, 0) === unvalid data');
-		assert.strictEqual(euclid(0 ,'jjjj'), 'unvalid data', 'euclid(0 , jjjj) === unvalid data');
+		assert.strictEqual(euclid('hello', 0), 'invalid data', 'euclid(hello, 0) === invalid data');
+		assert.strictEqual(euclid(0 ,'jjjj'), 'invalid data', 'euclid(0 , jjjj) === invalid data');
 	});
 });
 
