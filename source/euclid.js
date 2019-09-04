@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+* Euclid. Finds GCD
+* @param {number[]} numbers
+* @returns {number}
+*/
 const euclid = (...numbers) => {
 	let d = 0;
 	
