@@ -3,36 +3,34 @@
 /**
 * Euclid. Finds GCD
 * @param {number[]} numbers
-* @returns {NOD number}
+* @returns {number}
 */
-
 const euclid = (...numbers) => {
-	let currentNOD = 0;
 	let isInvalidData = false;
 
-	numbers.forEach(num => {
+	const currentNOD = numbers.reduce((currentNOD, num) => {
 		if (
 			typeof num !== 'number' ||
 			typeof currentNOD !== 'number'
 		) {
 			isInvalidData = true;
-			return;
+			return currentNOD;
 		}
 
-		currentNOD = euclidForTwo(currentNOD , num);
-	});
+		return euclidForTwo(currentNOD , num);
+	}, 0);
 
 	if (isInvalidData) {
 		return 'invalid data';
 	}
 
 	return currentNOD;
-}
+};
 
 /**
-* EuclidForTwo. Finds GCD of two numbers
-* @param {number1, number2}
-* @returns {NOD number}
-*/
-
+ * EuclidForTwo. Finds GCD of two numbers
+ * @param {number} a
+ * @param {number} b
+ * @returns {number}
+ */
 const euclidForTwo = (a, b) => b === 0 ? Math.abs(a) : euclidForTwo(b, a % b);
